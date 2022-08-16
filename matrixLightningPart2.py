@@ -8,44 +8,37 @@ for i in range(1000):
 def countLightsOn(dic):
     counter = 0
     for val in dic.values():
-        if val == 1:
-            counter += 1
+        if (val):
+            counter += val
     return counter
 
-a=1
-b=5
-print(matrix[f'{a},{b}'])
 
+# def turnOn(dic,r1,c1,r2,c2):
+#     for i in range(r1,r2+1):
+#         for j in range(c1,c2+1):
+#             dic[f'{i},{j}'] = 1
 
-matrix[f'{a},{b}'] = 2
-print(matrix[f'{a},{b}'])
+# def turnOff(dic,r1,c1,r2,c2):
+#     for i in range(r1,r2+1):
+#         for j in range(c1,c2+1):
+#             dic[f'{i},{j}'] = 0
 
-def turnOn(dic,r1,c1,r2,c2):
-    for i in range(r1,r2+1):
-        for j in range(c1,c2+1):
-            dic[f'{i},{j}'] = 1
-
-def turnOff(dic,r1,c1,r2,c2):
-    for i in range(r1,r2+1):
-        for j in range(c1,c2+1):
-            dic[f'{i},{j}'] = 0
-
-def toggle(dic,r1,c1,r2,c2):
-    for i in range(r1,r2+1):
-        for j in range(c1,c2+1):
-            dic[f'{i},{j}'] = 1 - dic[f'{i},{j}']
+# def toggle(dic,r1,c1,r2,c2):
+#     for i in range(r1,r2+1):
+#         for j in range(c1,c2+1):
+#             dic[f'{i},{j}'] = 1 - dic[f'{i},{j}']
 
 
 def turnOnV2(dic,r1,c1,r2,c2):
     for i in range(r1,r2+1):
         for j in range(c1,c2+1):
-            dic[f'{i},{j}'] =  1
+            dic[f'{i},{j}'] +=  1
 
 def turnOffV2(dic,r1,c1,r2,c2):
     for i in range(r1,r2+1):
         for j in range(c1,c2+1):
-            if dic[f'{i},{j}']:
-                dic[f'{i},{j}'] -= 1
+            if (dic[f'{i},{j}']):
+                dic[f'{i},{j}'] -=1
 
 def toggleV2(dic,r1,c1,r2,c2):
     for i in range(r1,r2+1):
@@ -71,6 +64,8 @@ def getRowsAndColumns(ss): #where ss is a string
             rowColumns.append(int(newString))
             newString = ''
     return rowColumns
+
+
 
 with open('input.txt', 'r',encoding='ISO-8859-1') as inputFile:
     for line in inputFile:

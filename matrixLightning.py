@@ -1,7 +1,7 @@
 matrix ={}
 
-for i in range(999):
-    for j in range(999):
+for i in range(1000):
+    for j in range(1000):
         matrix[f'{i},{j}'] = 0
 
 
@@ -12,12 +12,6 @@ def countLightsOn(dic):
             counter += 1
     return counter
 
-a=1
-b=5
-print(matrix[f'{a},{b}'])
-
-matrix[f'{a},{b}'] = 2
-print(matrix[f'{a},{b}'])
 
 def turnOn(dic,r1,c1,r2,c2):
     for i in range(r1,r2+1):
@@ -33,6 +27,23 @@ def toggle(dic,r1,c1,r2,c2):
     for i in range(r1,r2+1):
         for j in range(c1,c2+1):
             dic[f'{i},{j}'] = 1 - dic[f'{i},{j}']
+
+
+# def turnOnV2(dic,r1,c1,r2,c2):
+#     for i in range(r1,r2+1):
+#         for j in range(c1,c2+1):
+#             dic[f'{i},{j}'] += 1
+
+# def turnOffV2(dic,r1,c1,r2,c2):
+#     for i in range(r1,r2+1):
+#         for j in range(c1,c2+1):
+#             if (dic[f'{i},{j}']):
+#                 dic[f'{i},{j}'] -=1
+
+# def toggleV2(dic,r1,c1,r2,c2):
+#     for i in range(r1,r2+1):
+#         for j in range(c1,c2+1):
+#             dic[f'{i},{j}'] += 2
 
 
 def getRowsAndColumns(ss): #where ss is a string
@@ -74,8 +85,6 @@ with open('input.txt', 'r',encoding='ISO-8859-1') as inputFile:
                 indexes = getRowsAndColumns(line)
                 toggle(matrix,indexes[0],indexes[1],indexes[2],indexes[3])
                 print(f'Now are {countLightsOn(matrix)} lights On')
-
-        
         except:
             print("Please double check if the input.txt was defined accordingly to the examples provided")
 
