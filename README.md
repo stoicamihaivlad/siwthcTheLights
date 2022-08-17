@@ -4,7 +4,8 @@
 #mvstoica@mvstoica-mac candidate-submissions % python3 --version
 #Python 3.9.13
 
-#I haven't used any libraries, just Python
+I haven't used any libraries for the assigment, just Python. 
+However, for the unit testing, I have used python unittest standard library.
 
 
 >>matrixLightning.py 
