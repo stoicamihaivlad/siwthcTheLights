@@ -1,4 +1,4 @@
-# siwthcTheLights
+# switchTheLights
 
 #Please download all the files into your own PC and run the code.  I have used:
 #mvstoica@mvstoica-mac candidate-submissions % python3 --version
